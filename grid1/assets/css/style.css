@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    grid-template-rows: 60px 1fr 100px 60px;
+    grid-template-areas:
+      "header header header"
+      "sidebar content ad1"
+      "ad2 content ad1"
+      "footer footer footer";
+    height: 100vh;
+    gap: 5px;
+}
+
+.header{
+    grid-area: header;
+    background-color: rgb(110, 110, 192);
+    color: #fff;
+}
+
+.ad1{
+    grid-area: ad1;
+    background-color: rgb(130, 130, 218);
+    color: #fff;
+}
+
+.ad2{
+    grid-area: ad2;
+    background-color: rgb(62, 62, 105);
+    color: #fff;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(62, 62, 105);
+    color: #fff;
+}
+
+.content{
+    grid-area: content;
+    background-color: rgb(26, 26, 78);
+    color: #fff;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgb(71, 71, 184);
+    color: #fff;
+}
+.header,
+.sidebar,
+.ad1,
+.ad2,
+.content,
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
